@@ -8,7 +8,7 @@
 <body>
     <div class="container">
          <div class="jumbotron" style="margin-top: 20%">
-            <h1>„AHOJ {%- if komu is not none -%}{{ komu.upper() }}{% endif %}“</h1>
+            <h1>„AHOJ{%- if komu is not none -%}{{ " " + komu.upper() }}{% endif %}“</h1>
              {%- if od is not none -%}<p>–{{ od.upper() }}</p>{% endif %}
          </div>
     </div>
