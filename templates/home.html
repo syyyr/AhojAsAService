@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="margin-top: 20px">
+            <h1>AAAS</h1>
+            <h2>AHOJ as a Service</h2>
+            <h3>v0.0.1</h3>
+        </div>
+        <div class=".col-md-8">
+            <h2>Úvod</h2>
+            <p>AAAS (AHOJ as a Service) je úplně supr REST API řešení, pokud zrovna potřebujete někomu říct AHOJ.</p>
+
+            <h2>Typy návratových dat</h2>
+            <p>AAAS vrací data v následujících formátech, které si lze vyžádat pomocí hlavičky <code>Accept</code>:</p>
+            <table class="table">
+                <tr>
+                    <td>text/plain</td>
+                    <td>Vrátí obsah jako plain text string.</td>
+                </tr>
+                <tr>
+                    <td>application/json</td>
+                    <td>Vrátí obsah jako JSON objekt.</td>
+                </tr>
+                <tr>
+                    <td>text/html</td>
+                    <td>Vrátí obsah jako stránku, co je minimalistická af.</td>
+                </tr>
+                <tr>
+                    <td><s>application/xml</s></td>
+                    <td><s>lol jk</s></td>
+                </tr>
+            </table>
+
+            <h2>Operace</h2>
+            <p>Všechny requesty jsou pouze typu GET.</p>
+            <table class="table">
+                <thead>
+                    <td style="font-weight:bold;">Endpojnt</td>
+                    <td style="font-weight:bold;">Popis</td>
+                </thead>
+                <tr>
+                    <td>/version</td>
+                    <td>Vrátí verzi AAAS</td>
+                </tr>
+                <tr>
+                    <td>/ahoj</td>
+                    <td>Vrací "AHOJ"</td>
+                </tr>
+                <tr>
+                    <td>/ahoj/:komu/:od</td>
+                    <td>Vrací "AHOJ <strong>komu</strong> --<strong>od</strong>" <br>Parametr od může být vynechán.</td>
+                </tr>
+            </table>
+            <h2>Roadmap</h2>
+            <ul>
+                <li>
+                    <a href="http://github.com/chinese-soup/aaas">Fork me on GitHub xDDD</a>
+                </li>
+                <li>
+                    Inspired by <a href="http://foaas.com/">Fuck Off As A Servicee</a>
+                </li>
+                <li>
+                    AHOJ 2016
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
