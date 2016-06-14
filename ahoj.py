@@ -23,21 +23,21 @@ def version():
 @app.route("/ahoj/<komu>")
 @app.route("/ahoj/<komu>/<od>", methods=["GET"])
 def AHOJ(komu=None, od=None):
-    str = "AHOJ"
+    tstr = "AHOJ"
 
     if komu is not None:
-        str += ", {0}".format(komu.upper())
+        tstr += ", {0}".format(komu.upper())
 
     if request.headers["Accept"] == "application/json":
         if komu is not None and od is not None:
-            return jsonify({"message": str, "from": od.upper()})
+            return jsonify({"message": tstr, "from": od.upper()})
         else:
-            return jsonify({"message": str})
+            return jsonify({"message": tstr})
 
     elif request.headers["Accept"] == "text/plain":
         if komu is not None and od is not None:
-            str += ", {0} –{1}".format(komu.upper(), od.upper())
-        return str
+            tstr += ", {0} –{1}".format(komu.upper(), od.upper())
+        return tstr
 
     else: # default to html
         return render_template("page.html", od=od, komu=komu)
