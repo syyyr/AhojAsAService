@@ -29,17 +29,14 @@ def AHOJ(komu=None, od=None):
         str += ", {0}".format(komu.upper())
 
     if request.headers["Accept"] == "application/json":
-        json = {"message": str}
-
         if komu is not None and od is not None:
-            json["from"] = od.upper()
-
-        return jsonify(json)
+            return jsonify({"message": str, "from": od.upper()})
+        else:
+            return jsonify({"message": str})
 
     elif request.headers["Accept"] == "text/plain":
         if komu is not None and od is not None:
             str += ", {0} –{1}".format(komu.upper(), od.upper())
-
         return str
 
     else: # default to html
