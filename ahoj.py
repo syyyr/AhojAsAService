@@ -5,6 +5,7 @@ from flask import request
 from flask import jsonify
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False # allows trailing slashes in paths
 
 @app.route("/", methods=["GET"])
 def hello():
